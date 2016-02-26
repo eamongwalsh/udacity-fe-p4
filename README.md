@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 ## Website Performance Optimization portfolio project
 
 Your challenge, if you wish to accept it (and we sure hope you will), is to optimize this online portfolio for speed! In particular, optimize the critical rendering path and make this page render as quickly as possible by applying the techniques you've picked up in the [Critical Rendering Path course](https://www.udacity.com/course/ud884).
@@ -75,4 +75,3 @@ Feeling uninspired by the portfolio? Here's a list of cool portfolios I found af
 =======
 # udacity-fe-p4
 P4 Website Optimisation
->>>>>>> 71c2bdcaba0e4616a46a673508d6f8cc72c557a9
