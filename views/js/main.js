@@ -515,9 +515,7 @@ function updatePositions() {
   for (var i = 0; i < items.length; i++) {
     var phase = Math.sin(bodyCalc + (i % 5));
     
-    // Using translate is much faster than absolute positions
     items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
-    //items[i].style.transform = 'translateX(' + (100*phase) + 'px)';
   }
 
   // User Timing API to the rescue again. Seriously, it's worth learning.
@@ -534,10 +532,11 @@ function updatePositions() {
 window.addEventListener('scroll', updatePositions);
 
 // Generates the sliding pizzas when the page loads.
+// This does not need to be 200 - reduced to 40
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
-  for (var i = 0; i < 200; i++) {
+  for (var i = 0; i < 40; i++) {
     var elem = document.createElement('img');
     elem.className = 'mover';
     elem.src = "images/pizza.png";

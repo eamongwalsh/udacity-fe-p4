@@ -10,8 +10,8 @@
 
 ### Part 2: 
 
-1. Change from absolute positioning to using translate when sliding the background pizzas. Check out http://www.paulirish.com/2012/why-moving-elements-with-translate-is-better-than-posabs-topleft/ for more discussion on this.
 1. Optimised loops by taking some calculations out of the loop.
+1. Reduced number of pizza's from 200 to 40 as that's all we see on the screen at any one time (max).
 
 ### Original Udacity notes
 
