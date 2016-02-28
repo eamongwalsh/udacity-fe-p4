@@ -3,6 +3,23 @@
 
 Your challenge, if you wish to accept it (and we sure hope you will), is to optimize this online portfolio for speed! In particular, optimize the critical rendering path and make this page render as quickly as possible by applying the techniques you've picked up in the [Critical Rendering Path course](https://www.udacity.com/course/ud884).
 
+
+### Part 1: 
+
+a. Optimised images starting with the really obvious oversized pizza on the home page!
+
+
+
+
+
+### Part 2: 
+
+a. Change from absolute positioning to using translate when sliding the background pizzas. Check out http://www.paulirish.com/2012/why-moving-elements-with-translate-is-better-than-posabs-topleft/ for more discussion on this.
+
+
+
+
+
 To get started, check out the repository, inspect the code,
 
 ### Getting started

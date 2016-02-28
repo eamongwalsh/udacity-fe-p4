@@ -503,16 +503,9 @@ function updatePositions() {
   window.performance.mark("mark_start_frame");
 
   var items = document.querySelectorAll('.mover');
-
-  //Bring this calculation outside of the loop
-  var bodyCalc = document.body.scrollTop / 1250;
-    
   for (var i = 0; i < items.length; i++) {
-    var phase = Math.sin(bodyCalc + (i % 5));
-    
-    // Using translate is much faster than absolute positions
-    //items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
-    items[i].style.transform = 'translateX(' + (100*phase) + 'px)';
+    var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
+    items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
   }
 
   // User Timing API to the rescue again. Seriously, it's worth learning.
