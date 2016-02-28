@@ -1,22 +1,19 @@
 
 ## Website Performance Optimization portfolio project
 
-Your challenge, if you wish to accept it (and we sure hope you will), is to optimize this online portfolio for speed! In particular, optimize the critical rendering path and make this page render as quickly as possible by applying the techniques you've picked up in the [Critical Rendering Path course](https://www.udacity.com/course/ud884).
-
-
 ### Part 1: 
 
-a. Optimised images starting with the really obvious oversized pizza on the home page!
-b. Inline CSS styles from styles.css
-c. Add media attribute to print.css to ensure only downloaded for printing
-d. Minified CSS and JS files using gulp task runner - uglify. Courtesy of http://julienrenaux.fr/2014/05/25/introduction-to-gulp-js-with-practical-examples/#JS_Minification for tips and tricks. Uglify can be installed via npm - see https://www.npmjs.com/package/gulp-uglify for info.
+1. Optimised images starting with the really obvious oversized pizza on the home page!
+1. Inline CSS styles from styles.css
+1. Add media attribute to print.css to ensure only downloaded for printing
+1. Minified CSS and JS files using gulp task runner - uglify. Courtesy of http://julienrenaux.fr/2014/05/25/introduction-to-gulp-js-with-practical-examples/#JS_Minification for tips and tricks. Uglify can be installed via npm - see https://www.npmjs.com/package/gulp-uglify for info.
 
 ### Part 2: 
 
-a. Change from absolute positioning to using translate when sliding the background pizzas. Check out http://www.paulirish.com/2012/why-moving-elements-with-translate-is-better-than-posabs-topleft/ for more discussion on this.
-b. Optimised loops by taking some calculations out of the loop.
+1. Change from absolute positioning to using translate when sliding the background pizzas. Check out http://www.paulirish.com/2012/why-moving-elements-with-translate-is-better-than-posabs-topleft/ for more discussion on this.
+1. Optimised loops by taking some calculations out of the loop.
 
-Original Udacity notes
+### Original Udacity notes
 
 To get started, check out the repository, inspect the code,
 
@@ -86,4 +83,5 @@ Feeling uninspired by the portfolio? Here's a list of cool portfolios I found af
 * <a href="http://yourjustlucky.com/">http://yourjustlucky.com/</a>
 * <a href="http://nicoledominguez.com/portfolio/">http://nicoledominguez.com/portfolio/</a>
 * <a href="http://www.roxannecook.com/">http://www.roxannecook.com/</a>
+
 =======
