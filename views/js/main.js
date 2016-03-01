@@ -450,7 +450,8 @@ var resizePizzas = function(size) {
 
   //Create a variable for the pizza which can be used in the function.
   //Make calculations outside the function to optimise
-  var pizzaContainer = document.querySelectorAll(".randomPizzaContainer");
+  //Use getElementsByClassName as it's faster (courtesy of my Udacity coach)!
+  var pizzaContainer = document.getElementsByClassName("randomPizzaContainer");
   var pizzaContainerLen = pizzaContainer.length;
   var dx = determineDx(pizzaContainer[0], size);
   var newwidth = (pizzaContainer[0].offsetWidth + dx) + 'px';
@@ -474,8 +475,8 @@ var resizePizzas = function(size) {
 window.performance.mark("mark_start_generating"); // collect timing data
 
 // This for-loop actually creates and appends all of the pizzas when the page loads
+var pizzasDiv = document.getElementById("randomPizzas");
 for (var i = 2; i < 100; i++) {
-  var pizzasDiv = document.getElementById("randomPizzas");
   pizzasDiv.appendChild(pizzaElementGenerator(i));
 }
 
@@ -510,12 +511,21 @@ function updatePositions() {
   var items = document.querySelectorAll('.mover');
 
   //Bring this calculation outside of the loop
-  var bodyCalc = document.body.scrollTop / 1250;
-    
-  for (var i = 0; i < items.length; i++) {
-    var phase = Math.sin(bodyCalc + (i % 5));
-    
-    items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
+  //var bodyCalc = document.body.scrollTop / 1250;
+
+  //Another faster way to update positions using two loops
+  //Again thanks to my Udacity coach. Thanks!
+  var phase = []; 
+
+  for (var i = 0; i < 5; i++) {
+    phase.push(Math.sin(document.body.scrollTop / 1250 + i) * 600);
+  }
+
+  for (var i = 0, max = items.length; i < max; i++) {
+    //items[i].style.left = items[i].basicLeft + phase[i%5] + 'px';
+      
+    //Using translateX rather than absolute positions also faster
+    items[i].style.transform = 'translateX(' + phase[i%5] + 'px)';
   }
 
   // User Timing API to the rescue again. Seriously, it's worth learning.

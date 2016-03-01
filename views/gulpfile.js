@@ -1,3 +1,5 @@
+//To run use gulp minify-js
+
 // including plugins
 var gulp = require('gulp');
 var uglify = require("gulp-uglify");
